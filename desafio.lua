@@ -3,14 +3,14 @@ os.execute("cls")
 
 -- Ciatura
 local monsterName = "LOBO"
-local description = "Um monstro furtivo com instinto selvagem."
+local description = "Um animal furtivo com instinto selvagem."
 local emoji = "🐺"
 local sound = "Auuuuuuuuuuu"
 local favoriteTime = "Noturno"
 local item = "Carne"
 
 -- Atributos
-local attackAttribute = 10
+local attackAttribute = 9
 local defenseAttribute = 3
 local lifeAttribute = 7
 local speedAttribute = 8
@@ -33,9 +33,18 @@ local function getProgressBar(attribute)
     return result
 end
 
+local function getSeparator(N)
+    local character = "="
+    local result = ""
+
+    for i = 1, N, 1 do
+        result = result .. character
+    end
+
+    return result
+end
 -- Cartão
-print("======================================================")
-print("|")
+print(getSeparator(54))
 print("| Nome: " .. monsterName)
 print("| Descrição: " .. description)
 print("|")
@@ -43,12 +52,11 @@ print("| Emoji favorito: " .. emoji)
 print("| Som: " .. sound)
 print("| Horário favorito: " .. favoriteTime)
 print("| Item: " .. item)
-print("|")
+print(getSeparator(54))
 print("| Atributos")
 print("|    Ataque:       " .. getProgressBar(attackAttribute))
 print("|    Defesa:       " .. getProgressBar(defenseAttribute))
 print("|    Vida:         " .. getProgressBar(lifeAttribute))
 print("|    Velocidade:   " .. getProgressBar(speedAttribute))
 print("|    Inteligência: " .. getProgressBar(inteligenceAttribute))
-print("|")
-print("======================================================")
+print(getSeparator(54))
